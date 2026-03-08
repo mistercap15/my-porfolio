@@ -72,13 +72,13 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5"
           >
-            <span className="text-sm font-mono text-violet tracking-wider uppercase">
+            <span className="text-sm font-mono text-orange tracking-wider uppercase">
               06 / Contact
             </span>
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4 leading-tight">
               Let&apos;s work
               <br />
-              together<span className="text-violet">.</span>
+              together<span className="text-orange">.</span>
             </h2>
             <div className="section-separator mt-6" />
             <p className="text-muted mt-6 leading-relaxed">
@@ -104,7 +104,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -3, scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-background border border-border text-muted hover:text-violet hover:border-violet/40 transition-colors"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-background border border-border text-muted hover:text-orange hover:border-orange/40 transition-colors"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -124,7 +124,7 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-violet-light border border-violet/20 rounded-2xl p-10 text-center"
+                className="bg-orange-light border border-orange/20 rounded-2xl p-10 text-center"
               >
                 <div className="text-4xl mb-4">&#10003;</div>
                 <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold">
@@ -149,7 +149,7 @@ export default function Contact() {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet/30 focus:border-violet transition-all"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
                       placeholder="Your name"
                     />
                   </div>
@@ -165,7 +165,7 @@ export default function Contact() {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet/30 focus:border-violet transition-all"
+                      className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -182,7 +182,7 @@ export default function Contact() {
                     name="message"
                     rows={5}
                     required
-                    className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-violet/30 focus:border-violet transition-all resize-none"
+                    className="w-full px-4 py-3 bg-background border border-border rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-orange/30 focus:border-orange transition-all resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -190,7 +190,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto px-8 py-3 bg-violet text-white rounded-xl font-medium text-sm hover:bg-violet-dark transition-colors"
+                  className="w-full sm:w-auto px-8 py-3 bg-orange text-white rounded-xl font-medium text-sm hover:bg-orange-dark transition-colors"
                 >
                   Send Message
                 </motion.button>

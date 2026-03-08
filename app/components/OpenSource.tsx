@@ -42,11 +42,11 @@ export default function OpenSource() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-violet tracking-wider uppercase">
+          <span className="text-sm font-mono text-orange tracking-wider uppercase">
             05 / Side Projects
           </span>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            Beyond work<span className="text-violet">.</span>
+            Beyond work<span className="text-orange">.</span>
           </h2>
           <div className="section-separator mt-6" />
         </motion.div>
@@ -62,11 +62,11 @@ export default function OpenSource() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group block bg-surface border border-border rounded-2xl p-6 hover:border-violet/40 hover:shadow-lg transition-all"
+              className="group block bg-surface border border-border rounded-2xl p-6 hover:border-orange/40 hover:shadow-lg transition-all"
             >
               <div className="flex items-start justify-between mb-4">
                 <svg
-                  className="w-8 h-8 text-muted group-hover:text-violet transition-colors"
+                  className="w-8 h-8 text-muted group-hover:text-orange transition-colors"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -78,7 +78,7 @@ export default function OpenSource() {
                   {item.tech}
                 </span>
               </div>
-              <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg group-hover:text-violet transition-colors">
+              <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg group-hover:text-orange transition-colors">
                 {item.project}
               </h3>
               <p className="text-sm text-muted mt-2 leading-relaxed">

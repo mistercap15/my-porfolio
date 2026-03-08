@@ -22,7 +22,7 @@ export default function Hero() {
   return (
     <section className="min-h-screen relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-violet/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-10 w-72 h-72 bg-coral/5 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
@@ -35,8 +35,8 @@ export default function Hero() {
           {/* Left column - main content */}
           <div className="lg:col-span-7 space-y-8">
             <motion.div variants={fadeUp} className="flex items-center gap-3">
-              <span className="h-px w-12 bg-violet" />
-              <span className="text-sm font-mono text-violet tracking-wider uppercase">
+              <span className="h-px w-12 bg-orange" />
+              <span className="text-sm font-mono text-orange tracking-wider uppercase">
                 Software Engineer (React JS)
               </span>
             </motion.div>
@@ -52,10 +52,10 @@ export default function Hero() {
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ delay: 1, duration: 0.6, ease: "easeOut" }}
-                  className="absolute bottom-2 left-0 right-0 h-3 bg-violet/20 origin-left -z-0"
+                  className="absolute bottom-2 left-0 right-0 h-3 bg-orange/20 origin-left -z-0"
                 />
               </span>
-              <span className="text-violet">.</span>
+              <span className="text-orange">.</span>
               <br />
               <span className="text-4xl sm:text-5xl lg:text-6xl text-muted">
                 I build for web & mobile.
@@ -87,7 +87,7 @@ export default function Hero() {
               </a>
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium text-sm hover:border-violet hover:text-violet transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium text-sm hover:border-orange hover:text-orange transition-colors"
               >
                 Contact Me
               </a>

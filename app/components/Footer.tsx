@@ -23,7 +23,7 @@ export default function Footer() {
               href="#"
               className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold"
             >
-              <span className="text-violet">khilan</span>
+              <span className="text-orange">khilan</span>
               <span className="text-foreground">.dev</span>
             </a>
             <span className="text-muted text-sm">
@@ -39,7 +39,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
-                className="text-sm text-muted hover:text-violet transition-colors link-underline"
+                className="text-sm text-muted hover:text-orange transition-colors link-underline"
               >
                 {link.label}
               </motion.a>

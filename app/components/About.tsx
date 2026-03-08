@@ -7,7 +7,7 @@ const highlights = [
   {
     label: "Frontend",
     description: "React, Next.js, Vue.js, Nuxt.js with responsive, pixel-perfect UI",
-    color: "bg-violet/10 text-violet border-violet/20",
+    color: "bg-orange/10 text-orange border-orange/20",
   },
   {
     label: "Backend",
@@ -44,13 +44,13 @@ export default function About() {
             className="lg:col-span-4"
           >
             <div className="lg:sticky lg:top-28">
-              <span className="text-sm font-mono text-violet tracking-wider uppercase">
+              <span className="text-sm font-mono text-orange tracking-wider uppercase">
                 01 / About
               </span>
               <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4 leading-tight">
                 A bit about
                 <br />
-                myself<span className="text-violet">.</span>
+                myself<span className="text-orange">.</span>
               </h2>
               <div className="section-separator mt-6" />
             </div>

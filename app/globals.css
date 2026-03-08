@@ -3,9 +3,9 @@
 @theme inline {
   --color-background: #fafaf9;
   --color-foreground: #1c1917;
-  --color-violet: #7c3aed;
-  --color-violet-light: #ede9fe;
-  --color-violet-dark: #6d28d9;
+  --color-orange: #fb923c;
+  --color-orange-light: #fff7ed;
+  --color-orange-dark: #f97316;
   --color-coral: #f97316;
   --color-coral-light: #fff7ed;
   --color-electric: #0ea5e9;
@@ -40,7 +40,7 @@ body {
 }
 
 ::selection {
-  background: var(--color-violet);
+  background: var(--color-orange);
   color: white;
 }
 
@@ -71,7 +71,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-violet);
+  background: var(--color-orange);
   transition: width 0.3s ease;
 }
 
@@ -83,6 +83,6 @@ body {
 .section-separator {
   width: 60px;
   height: 4px;
-  background: var(--color-violet);
+  background: var(--color-orange);
   border-radius: 2px;
 }

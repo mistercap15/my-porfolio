@@ -8,7 +8,7 @@ const skills = [
     name: "React",
     category: "Frontend",
     level: 95,
-    accent: "bg-violet",
+    accent: "bg-orange",
   },
   {
     name: "Next.js",
@@ -44,7 +44,7 @@ const skills = [
     name: "Tailwind CSS",
     category: "Styling",
     level: 90,
-    accent: "bg-violet",
+    accent: "bg-orange",
   },
   {
     name: "Node.js",
@@ -99,11 +99,11 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-violet tracking-wider uppercase">
+          <span className="text-sm font-mono text-orange tracking-wider uppercase">
             02 / Skills
           </span>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            Tech I work with<span className="text-violet">.</span>
+            Tech I work with<span className="text-orange">.</span>
           </h2>
           <div className="section-separator mt-6" />
         </motion.div>
@@ -124,7 +124,7 @@ export default function Skills() {
                     whileHover={{ scale: 1.1 }}
                     className={`w-2.5 h-2.5 rounded-full ${skill.accent}`}
                   />
-                  <span className="font-[family-name:var(--font-space-grotesk)] font-semibold text-base group-hover:text-violet transition-colors">
+                  <span className="font-[family-name:var(--font-space-grotesk)] font-semibold text-base group-hover:text-orange transition-colors">
                     {skill.name}
                   </span>
                 </div>
