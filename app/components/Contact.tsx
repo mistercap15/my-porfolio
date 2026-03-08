@@ -101,7 +101,7 @@ export default function Contact() {
             className="lg:col-span-5"
           >
             <span className="text-sm font-mono text-orange tracking-wider uppercase">
-              06 / Contact
+              07 / Contact
             </span>
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4 leading-tight">
               Let&apos;s work
