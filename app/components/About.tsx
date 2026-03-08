@@ -6,23 +6,23 @@ import { useRef } from "react";
 const highlights = [
   {
     label: "Frontend",
-    description: "React, Next.js, Vue ecosystems with pixel-perfect UI",
+    description: "React, Next.js, Vue.js, Nuxt.js with responsive, pixel-perfect UI",
     color: "bg-teal/10 text-teal border-teal/20",
   },
   {
     label: "Backend",
-    description: "Node.js, Express, REST & GraphQL APIs",
+    description: "Node.js, Express — REST APIs and server-side logic",
     color: "bg-coral/10 text-warm border-coral/20",
   },
   {
     label: "Mobile",
-    description: "React Native & Expo for cross-platform apps",
+    description: "React Native & Expo for cross-platform mobile apps",
     color: "bg-electric/10 text-electric border-electric/20",
   },
   {
-    label: "Database",
-    description: "MongoDB, PostgreSQL, Redis for data layer",
-    color: "bg-emerald/10 text-emerald border-emerald/20",
+    label: "State & Data",
+    description: "Redux Toolkit, Context API, MongoDB for robust data flow",
+    color: "bg-amber/10 text-amber border-amber/20",
   },
 ];
 
@@ -65,17 +65,17 @@ export default function About() {
               className="space-y-6"
             >
               <p className="text-lg text-muted leading-relaxed">
-                I&apos;m a full-stack developer who loves turning complex problems
-                into simple, elegant solutions. With over five years of
-                experience across the JavaScript ecosystem, I&apos;ve built
-                everything from interactive dashboards to mobile apps and
-                scalable APIs.
+                I&apos;m Khilan Patel, a passionate React.js developer based in
+                Ahmedabad, India. I hold a B.E. in Information Technology from
+                Sinhgad College of Engineering, Pune. I thrive on turning complex
+                problems into clean, performant web and mobile applications.
               </p>
               <p className="text-lg text-muted leading-relaxed">
-                My approach is rooted in clean code, thoughtful architecture,
-                and genuine care for the end user. I believe great software is
-                invisible — it just works, feels intuitive, and gets out of the
-                way.
+                My approach is rooted in collaboration — working closely with
+                back-end developers, project managers, and clients to deliver
+                tailored solutions. I&apos;m always eager to learn and implement
+                new technologies to enhance development efficiency and product
+                quality.
               </p>
             </motion.div>
 

@@ -2,6 +2,15 @@
 
 import { motion } from "framer-motion";
 
+const footerLinks = [
+  { label: "GitHub", href: "https://github.com/mistercap15" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/khilan-patel-4417b196",
+  },
+  { label: "Twitter", href: "https://twitter.com" },
+];
+
 export default function Footer() {
   return (
     <footer className="py-12 relative">
@@ -14,8 +23,8 @@ export default function Footer() {
               href="#"
               className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold"
             >
-              <span className="text-teal">dev</span>
-              <span className="text-foreground">.folio</span>
+              <span className="text-teal">khilan</span>
+              <span className="text-foreground">.dev</span>
             </a>
             <span className="text-muted text-sm">
               &copy; {new Date().getFullYear()}
@@ -23,14 +32,16 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-6">
-            {["GitHub", "LinkedIn", "Twitter"].map((link) => (
+            {footerLinks.map((link) => (
               <motion.a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ y: -2 }}
                 className="text-sm text-muted hover:text-teal transition-colors link-underline"
               >
-                {link}
+                {link.label}
               </motion.a>
             ))}
           </div>

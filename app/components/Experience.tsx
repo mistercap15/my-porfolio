@@ -5,40 +5,40 @@ import { useRef } from "react";
 
 const timeline = [
   {
-    year: "2024 — Present",
-    role: "Senior Full-Stack Developer",
-    company: "Freelance / Contract",
+    year: "Nov 2024 — Present",
+    role: "Associate Consultant",
+    company: "Infosys",
     description:
-      "Building custom web applications and mobile solutions for startups and agencies. Focus on Next.js, React Native, and scalable Node.js backends.",
-    tech: ["Next.js", "React Native", "TypeScript", "MongoDB"],
+      "Working as an associate consultant, contributing to enterprise-level projects and delivering scalable solutions for clients across various domains.",
+    tech: ["React", "TypeScript", "Next.js"],
     accent: "bg-teal",
   },
   {
-    year: "2022 — 2024",
-    role: "Full-Stack Developer",
-    company: "Tech Startup",
+    year: "Feb 2024 — Sep 2024",
+    role: "Software Engineer (React JS)",
+    company: "Impero IT Services",
     description:
-      "Led frontend architecture migration to Next.js. Developed real-time features and RESTful APIs serving 50K+ monthly users.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
+      "Developed scalable web applications using React, Context API, and Bootstrap. Collaborated with back-end developers and project managers, engaged with clients to understand requirements and deliver tailored solutions.",
+    tech: ["React", "Context API", "Bootstrap", "TypeScript"],
     accent: "bg-coral",
   },
   {
-    year: "2021 — 2022",
-    role: "Frontend Developer",
-    company: "Digital Agency",
+    year: "Jul 2022 — Jan 2024",
+    role: "React JS Developer",
+    company: "IT Path Solutions",
     description:
-      "Built responsive web applications for diverse clients. Introduced component library and design system that reduced development time by 40%.",
-    tech: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
+      "Developed dynamic web applications using React, Material UI, and responsive CSS. Optimized website performance, reducing page load times. Utilized Redux Toolkit for state management and collaborated with back-end teams for seamless integration.",
+    tech: ["React", "Redux Toolkit", "Material UI", "CSS"],
     accent: "bg-electric",
   },
   {
-    year: "2019 — 2021",
-    role: "Junior Developer",
-    company: "Software Company",
+    year: "2017 — 2022",
+    role: "B.E. Information Technology",
+    company: "Sinhgad College of Engineering, Pune",
     description:
-      "Started professional journey building internal tools and customer-facing features. Learned the fundamentals of production-grade code.",
-    tech: ["React", "Node.js", "MongoDB"],
-    accent: "bg-emerald",
+      "Completed Bachelor of Engineering in Information Technology, building a strong foundation in computer science, data structures, algorithms, and web technologies.",
+    tech: ["JavaScript", "HTML", "CSS", "Data Structures"],
+    accent: "bg-amber",
   },
 ];
 

@@ -37,7 +37,7 @@ export default function Hero() {
             <motion.div variants={fadeUp} className="flex items-center gap-3">
               <span className="h-px w-12 bg-teal" />
               <span className="text-sm font-mono text-teal tracking-wider uppercase">
-                Full-Stack Developer
+                Software Engineer (React JS)
               </span>
             </motion.div>
 
@@ -45,11 +45,9 @@ export default function Hero() {
               variants={fadeUp}
               className="font-[family-name:var(--font-space-grotesk)] text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight"
             >
-              I build things
-              <br />
-              for the{" "}
+              Hi, I&apos;m{" "}
               <span className="relative inline-block">
-                <span className="relative z-10">web</span>
+                <span className="relative z-10">Khilan</span>
                 <motion.span
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
@@ -58,15 +56,19 @@ export default function Hero() {
                 />
               </span>
               <span className="text-teal">.</span>
+              <br />
+              <span className="text-4xl sm:text-5xl lg:text-6xl text-muted">
+                I build for the web.
+              </span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg text-muted max-w-lg leading-relaxed"
             >
-              A developer passionate about crafting clean, performant, and
-              accessible digital experiences. Focused on modern JavaScript
-              ecosystems and thoughtful user interfaces.
+              Passionate and detail-oriented React.js developer with a proven
+              track record of building high-performance web applications.
+              Delivering scalable, responsive, and user-centric solutions.
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 pt-2">
@@ -93,48 +95,50 @@ export default function Hero() {
           </div>
 
           {/* Right column - decorative info */}
-          <motion.div
-            variants={fadeUp}
-            className="lg:col-span-5 lg:pt-16"
-          >
+          <motion.div variants={fadeUp} className="lg:col-span-5 lg:pt-16">
             <div className="space-y-6">
               {/* Status card */}
               <div className="bg-surface border border-border rounded-2xl p-6 space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-emerald rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-teal rounded-full animate-pulse" />
                   <span className="text-sm text-muted">
-                    Available for opportunities
+                    Based in Ahmedabad, India
                   </span>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <p className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)]">
-                      5+
+                      3+
                     </p>
                     <p className="text-xs text-muted">Years Experience</p>
                   </div>
                   <div>
                     <p className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)]">
-                      30+
+                      10+
                     </p>
-                    <p className="text-xs text-muted">Projects Completed</p>
+                    <p className="text-xs text-muted">Projects Delivered</p>
                   </div>
                 </div>
               </div>
 
               {/* Tech badges */}
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Node.js", "Tailwind"].map(
-                  (tech) => (
-                    <motion.span
-                      key={tech}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs font-mono text-muted"
-                    >
-                      {tech}
-                    </motion.span>
-                  )
-                )}
+                {[
+                  "React",
+                  "Next.js",
+                  "Vue.js",
+                  "TypeScript",
+                  "React Native",
+                  "Node.js",
+                ].map((tech) => (
+                  <motion.span
+                    key={tech}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    className="px-3 py-1.5 bg-surface border border-border rounded-full text-xs font-mono text-muted"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
               </div>
             </div>
           </motion.div>

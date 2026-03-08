@@ -13,43 +13,49 @@ const skills = [
   {
     name: "Next.js",
     category: "Frontend",
-    level: 92,
+    level: 90,
     accent: "bg-foreground",
   },
   {
     name: "Vue.js",
     category: "Frontend",
     level: 85,
-    accent: "bg-emerald",
+    accent: "bg-amber",
   },
   {
     name: "Nuxt.js",
     category: "Frontend",
     level: 80,
-    accent: "bg-emerald",
+    accent: "bg-amber",
   },
   {
     name: "TypeScript",
     category: "Language",
-    level: 90,
+    level: 88,
     accent: "bg-electric",
+  },
+  {
+    name: "JavaScript",
+    category: "Language",
+    level: 95,
+    accent: "bg-coral",
   },
   {
     name: "Tailwind CSS",
     category: "Styling",
-    level: 95,
+    level: 90,
     accent: "bg-teal",
   },
   {
     name: "Node.js",
     category: "Backend",
-    level: 88,
-    accent: "bg-emerald",
+    level: 70,
+    accent: "bg-amber",
   },
   {
     name: "Express",
     category: "Backend",
-    level: 85,
+    level: 68,
     accent: "bg-coral",
   },
   {
@@ -67,8 +73,14 @@ const skills = [
   {
     name: "MongoDB",
     category: "Database",
-    level: 85,
-    accent: "bg-emerald",
+    level: 70,
+    accent: "bg-amber",
+  },
+  {
+    name: "Redux Toolkit",
+    category: "State",
+    level: 88,
+    accent: "bg-coral",
   },
 ];
 

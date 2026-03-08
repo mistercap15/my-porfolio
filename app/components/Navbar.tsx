@@ -39,8 +39,8 @@ export default function Navbar() {
               href="#"
               className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold tracking-tight"
             >
-              <span className="text-teal">dev</span>
-              <span className="text-foreground">.folio</span>
+              <span className="text-teal">khilan</span>
+              <span className="text-foreground">.dev</span>
             </a>
 
             <div className="hidden md:flex items-center gap-8">

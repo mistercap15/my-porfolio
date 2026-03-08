@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Developer Portfolio",
+  title: "Khilan Patel — Software Engineer",
   description:
-    "Full-stack developer specializing in modern web technologies. Building thoughtful, performant digital experiences.",
+    "Passionate React.js developer building high-performance web and mobile applications. Specializing in React, Next.js, Vue.js, and React Native.",
 };
 
 export default function RootLayout({

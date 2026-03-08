@@ -5,10 +5,10 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "TaskFlow",
+    title: "Clinical Q",
     description:
-      "A real-time project management platform with drag-and-drop boards, team collaboration, and smart deadline tracking. Built for remote teams who value simplicity.",
-    tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
+      "A comprehensive test preparation platform for medical students featuring in-depth performance analytics, Stripe payment integration, and Google APIs for address autocomplete. Built responsive interfaces for both admin and end-users.",
+    tech: ["React", "Context API", "Bootstrap", "Stripe", "Apex Charts"],
     github: "https://github.com",
     live: "https://example.com",
     accent: "border-teal",
@@ -16,10 +16,10 @@ const projects = [
     number: "01",
   },
   {
-    title: "ShopMobile",
+    title: "Bhagavad Gita App",
     description:
-      "Cross-platform e-commerce mobile app with seamless payment integration, push notifications, and offline-first architecture for unreliable networks.",
-    tech: ["React Native", "Expo", "Node.js", "Express"],
+      "A mobile application bringing the timeless wisdom of the Bhagavad Gita to modern devices. Features chapter-wise navigation, verse explanations, and a clean reading experience built with React Native and Expo.",
+    tech: ["React Native", "Expo", "TypeScript"],
     github: "https://github.com",
     live: "https://example.com",
     accent: "border-coral",
@@ -27,10 +27,10 @@ const projects = [
     number: "02",
   },
   {
-    title: "DevDash",
+    title: "Zu Chat",
     description:
-      "Developer analytics dashboard aggregating GitHub, Jira, and CI/CD data into a single, actionable overview. Features real-time updates and custom widgets.",
-    tech: ["Vue.js", "Nuxt.js", "TypeScript", "Tailwind CSS"],
+      "An anonymous chat application enabling real-time conversations without identity exposure. Built for privacy-first communication with a clean, intuitive mobile interface.",
+    tech: ["React Native", "Expo", "Node.js", "MongoDB"],
     github: "https://github.com",
     live: "https://example.com",
     accent: "border-electric",
@@ -38,15 +38,37 @@ const projects = [
     number: "03",
   },
   {
-    title: "ContentAPI",
+    title: "Leaving Cert Plus",
     description:
-      "Headless CMS with a developer-friendly REST and GraphQL API, built-in image optimization, and webhook integrations for modern JAMstack workflows.",
-    tech: ["Node.js", "Express", "MongoDB", "TypeScript"],
+      "A subscription-based e-learning platform with MCQs, subjective tests, video/audio tutorials, and teacher-assigned tasks. Features Stripe subscription payments and analytics dashboards for students and teachers.",
+    tech: ["Nuxt.js", "Pinia", "Bootstrap", "Stripe"],
     github: "https://github.com",
     live: "https://example.com",
-    accent: "border-emerald",
-    accentBg: "bg-emerald/5",
+    accent: "border-amber",
+    accentBg: "bg-amber/5",
     number: "04",
+  },
+  {
+    title: "uTrade",
+    description:
+      "A B2B platform connecting sellers with efficient inventory management. Integrated APIs for real-time data updates and seamless communication between systems, handling large data sets effectively.",
+    tech: ["React", "Context API", "Bootstrap"],
+    github: "https://github.com",
+    live: "https://example.com",
+    accent: "border-teal",
+    accentBg: "bg-teal/5",
+    number: "05",
+  },
+  {
+    title: "CJ Fallon",
+    description:
+      "A school curriculum management system with role-based panels for teachers, admins, and schools. Admins create schools, school admins manage teachers, and teachers build custom curriculums based on subjects and classes.",
+    tech: ["Nuxt.js", "Pinia", "Bootstrap"],
+    github: "https://github.com",
+    live: "https://example.com",
+    accent: "border-coral",
+    accentBg: "bg-coral/5",
+    number: "06",
   },
 ];
 
@@ -75,8 +97,8 @@ export default function Projects() {
             <div className="section-separator mt-6" />
           </div>
           <p className="text-muted max-w-md">
-            A curated collection of projects that showcase my approach to
-            solving real problems with clean code.
+            A collection of professional and personal projects — from healthcare
+            platforms to mobile apps and e-learning systems.
           </p>
         </motion.div>
 

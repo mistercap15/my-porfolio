@@ -3,23 +3,26 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const contributions = [
+const personalProjects = [
   {
-    project: "next-auth",
-    description: "Contributed session handling improvements and TypeScript type fixes",
-    stars: "18.2k",
+    project: "Bhagavad Gita App",
+    description:
+      "A mobile app bringing the Bhagavad Gita to modern devices with chapter-wise navigation and verse explanations",
+    tech: "React Native + Expo",
     link: "https://github.com",
   },
   {
-    project: "tailwindcss",
-    description: "Fixed responsive utility edge cases and documentation improvements",
-    stars: "80k",
+    project: "Zu Chat",
+    description:
+      "Anonymous real-time chat application built for privacy-first communication with a clean mobile interface",
+    tech: "React Native + Expo",
     link: "https://github.com",
   },
   {
-    project: "react-hook-form",
-    description: "Added custom validation pattern examples and performance optimizations",
-    stars: "40k",
+    project: "Meta Med",
+    description:
+      "Healthcare platform for doctors and GPs to manage patient appointments and track medical reports in real-time",
+    tech: "React + Context API",
     link: "https://github.com",
   },
 ];
@@ -40,16 +43,16 @@ export default function OpenSource() {
           className="mb-16"
         >
           <span className="text-sm font-mono text-teal tracking-wider uppercase">
-            05 / Open Source
+            05 / Side Projects
           </span>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            Giving back<span className="text-teal">.</span>
+            Beyond work<span className="text-teal">.</span>
           </h2>
           <div className="section-separator mt-6" />
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {contributions.map((item, i) => (
+          {personalProjects.map((item, i) => (
             <motion.a
               key={item.project}
               href={item.link}
@@ -71,15 +74,8 @@ export default function OpenSource() {
                 >
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
                 </svg>
-                <span className="flex items-center gap-1 text-xs text-muted">
-                  <svg
-                    className="w-3.5 h-3.5"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                  {item.stars}
+                <span className="text-xs font-mono text-muted px-2 py-0.5 bg-background rounded">
+                  {item.tech}
                 </span>
               </div>
               <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg group-hover:text-teal transition-colors">
