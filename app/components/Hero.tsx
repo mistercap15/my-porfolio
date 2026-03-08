@@ -222,7 +222,7 @@ export default function Hero() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-comment">current_role:</span>
-                  <span className="text-yellow">@Infosys</span>
+                  <span className="text-yellow">@Full Stack Developer</span>
                 </div>
               </div>
             </div>
