@@ -28,11 +28,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-28 relative bg-surface">
+    <section id="contact" className="py-20 sm:py-24 lg:py-28 relative bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12">
           {/* Left */}
           <div className="lg:col-span-5">
             <motion.div
@@ -41,7 +41,7 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-xs text-comment">{"// section.07"}</span>
-              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
                 <span className="text-red">contact</span>
                 <span className="text-foreground">()</span>
                 <span className="cursor-blink text-green ml-1">_</span>
