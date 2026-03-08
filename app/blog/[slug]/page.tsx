@@ -13,14 +13,15 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="font-[family-name:var(--font-space-grotesk)] text-4xl font-bold">
-            Post not found
-          </h1>
+          <p className="text-red text-sm mb-2">Error: Post not found</p>
+          <p className="text-comment text-xs mb-6">
+            Process exited with code 404
+          </p>
           <Link
             href="/#blog"
-            className="inline-block mt-6 text-orange hover:underline"
+            className="text-green hover:underline text-sm"
           >
-            &larr; Back to blog
+            $ cd ~/blog
           </Link>
         </div>
       </div>
@@ -30,32 +31,20 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen">
       {/* Top nav bar */}
-      <nav className="fixed top-0 left-0 right-0 z-40 bg-surface/80 backdrop-blur-xl border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <nav className="fixed top-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-xl border-b border-border">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between">
           <Link
             href="/#blog"
-            className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-muted hover:text-green transition-colors"
           >
-            <svg
-              className="w-4 h-4"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="15 18 9 12 15 6" />
-            </svg>
-            Back to portfolio
+            <span className="text-green">{"<"}</span>
+            cd ~/blog
           </Link>
-          <a
-            href="#"
-            className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold tracking-tight"
-          >
-            <span className="text-orange">khilan</span>
-            <span className="text-foreground">.dev</span>
-          </a>
+          <div className="flex items-center gap-1 text-sm">
+            <span className="text-comment">~/</span>
+            <span className="text-green">khilan</span>
+            <span className="text-muted">.dev</span>
+          </div>
         </div>
       </nav>
 
@@ -64,43 +53,58 @@ export default function BlogPost() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto px-6 lg:px-8 pt-32 pb-20"
+        className="max-w-4xl mx-auto px-6 lg:px-8 pt-28 pb-20"
       >
-        {/* Meta */}
-        <div className="flex items-center gap-3 text-sm text-muted mb-4">
-          <time>{post.date}</time>
-          <span className="w-1 h-1 bg-muted/40 rounded-full" />
-          <span>{post.readTime}</span>
-        </div>
-
-        {/* Title */}
-        <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-          {post.title}
-        </h1>
-
-        {/* Tags */}
-        <div className="flex gap-2 mt-6">
-          {post.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs font-mono px-3 py-1 bg-surface border border-border rounded-full"
-            >
-              {tag}
+        {/* File header */}
+        <div className="bg-surface border border-border rounded-lg overflow-hidden mb-8">
+          <div className="flex items-center gap-2 px-4 py-2 bg-panel border-b border-border">
+            <div className="flex gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-red/70" />
+              <span className="w-2.5 h-2.5 rounded-full bg-yellow/70" />
+              <span className="w-2.5 h-2.5 rounded-full bg-green/70" />
+            </div>
+            <span className="text-xs text-comment ml-2">
+              ~/blog/{post.slug}.md
             </span>
-          ))}
-        </div>
+          </div>
 
-        <div className="h-px bg-border my-10" />
+          <div className="p-6">
+            {/* Meta */}
+            <div className="flex items-center gap-3 text-xs text-comment mb-4">
+              <time>{post.date}</time>
+              <span className="text-border">|</span>
+              <span>{post.readTime}</span>
+            </div>
+
+            {/* Title */}
+            <h1 className="font-[family-name:var(--font-space-grotesk)] text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-foreground">
+              {post.title}
+            </h1>
+
+            {/* Tags */}
+            <div className="flex gap-2 mt-4">
+              {post.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="text-xs px-2.5 py-0.5 bg-background border border-border rounded-sm text-comment"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Content */}
-        <div className="prose-custom">
+        <div className="space-y-0">
           {post.content.split("\n\n").map((block, i) => {
             if (block.startsWith("## ")) {
               return (
                 <h2
                   key={i}
-                  className="font-[family-name:var(--font-space-grotesk)] text-2xl font-bold mt-10 mb-4"
+                  className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold mt-10 mb-4 text-green"
                 >
+                  <span className="text-comment text-sm mr-2">##</span>
                   {block.replace("## ", "")}
                 </h2>
               );
@@ -108,14 +112,20 @@ export default function BlogPost() {
 
             if (block.startsWith("```")) {
               const lines = block.split("\n");
+              const lang = lines[0].replace("```", "") || "code";
               const code = lines.slice(1, -1).join("\n");
               return (
-                <pre
+                <div
                   key={i}
-                  className="bg-[#1c1917] text-[#e7e5e4] rounded-xl p-5 overflow-x-auto text-sm leading-relaxed my-6 font-[family-name:var(--font-mono)]"
+                  className="bg-surface border border-border rounded-lg overflow-hidden my-6"
                 >
-                  <code>{code}</code>
-                </pre>
+                  <div className="flex items-center gap-2 px-4 py-1.5 bg-panel border-b border-border">
+                    <span className="text-xs text-comment">{lang}</span>
+                  </div>
+                  <pre className="p-5 overflow-x-auto text-sm leading-relaxed">
+                    <code className="text-foreground">{code}</code>
+                  </pre>
+                </div>
               );
             }
 
@@ -126,12 +136,21 @@ export default function BlogPost() {
                   {items.map((item, j) => (
                     <li
                       key={j}
-                      className="flex gap-2 text-muted leading-relaxed"
+                      className="flex gap-2 text-sm text-muted leading-relaxed"
                     >
-                      <span className="text-orange mt-1.5 shrink-0">
-                        &#8226;
+                      <span className="text-green mt-0.5 shrink-0">
+                        {">"}
                       </span>
-                      <span>{item.replace(/^- /, "")}</span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: item
+                            .replace(/^- /, "")
+                            .replace(
+                              /\*\*(.*?)\*\*/g,
+                              '<strong class="text-foreground font-semibold">$1</strong>'
+                            ),
+                        }}
+                      />
                     </li>
                   ))}
                 </ul>
@@ -148,9 +167,9 @@ export default function BlogPost() {
                   {items.map((item, j) => (
                     <li
                       key={j}
-                      className="flex gap-3 text-muted leading-relaxed"
+                      className="flex gap-3 text-sm text-muted leading-relaxed"
                     >
-                      <span className="text-orange font-mono text-sm font-bold shrink-0">
+                      <span className="text-green font-mono text-xs font-bold shrink-0 mt-0.5">
                         {j + 1}.
                       </span>
                       <span
@@ -169,11 +188,10 @@ export default function BlogPost() {
               );
             }
 
-            // Regular paragraph — handle inline code and bold
             return (
               <p
                 key={i}
-                className="text-muted leading-relaxed my-4"
+                className="text-sm text-muted leading-relaxed my-4"
                 dangerouslySetInnerHTML={{
                   __html: block
                     .replace(
@@ -182,7 +200,7 @@ export default function BlogPost() {
                     )
                     .replace(
                       /`([^`]+)`/g,
-                      '<code class="bg-surface px-1.5 py-0.5 rounded text-sm font-[family-name:var(--font-mono)] text-orange">$1</code>'
+                      '<code class="bg-surface px-1.5 py-0.5 rounded-sm text-xs text-green border border-border">$1</code>'
                     ),
                 }}
               />
@@ -195,17 +213,17 @@ export default function BlogPost() {
         <div className="flex items-center justify-between">
           <Link
             href="/#blog"
-            className="inline-flex items-center gap-2 text-sm text-muted hover:text-orange transition-colors"
+            className="text-sm text-muted hover:text-green transition-colors"
           >
-            &larr; All posts
+            {"<"} all posts
           </Link>
           <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-muted hover:text-orange transition-colors"
+            className="text-sm text-muted hover:text-green transition-colors"
           >
-            Share on X &rarr;
+            share on X {">"}
           </a>
         </div>
       </motion.article>
