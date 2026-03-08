@@ -44,8 +44,8 @@ const projects = [
     tech: ["Nuxt.js", "Pinia", "Bootstrap", "Stripe"],
     github: "https://github.com",
     live: "https://example.com",
-    accent: "border-amber",
-    accentBg: "bg-amber/5",
+    accent: "border-cyan",
+    accentBg: "bg-cyan/5",
     number: "04",
   },
   {

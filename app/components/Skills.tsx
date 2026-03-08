@@ -20,13 +20,13 @@ const skills = [
     name: "Vue.js",
     category: "Frontend",
     level: 85,
-    accent: "bg-coral",
+    accent: "bg-cyan",
   },
   {
     name: "Nuxt.js",
     category: "Frontend",
     level: 80,
-    accent: "bg-coral",
+    accent: "bg-cyan",
   },
   {
     name: "TypeScript",
@@ -50,7 +50,7 @@ const skills = [
     name: "Node.js",
     category: "Backend",
     level: 70,
-    accent: "bg-violet",
+    accent: "bg-cyan",
   },
   {
     name: "Express",
@@ -74,7 +74,7 @@ const skills = [
     name: "MongoDB",
     category: "Database",
     level: 70,
-    accent: "bg-electric",
+    accent: "bg-cyan",
   },
   {
     name: "Redux Toolkit",

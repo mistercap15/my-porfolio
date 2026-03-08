@@ -38,7 +38,7 @@ const timeline = [
     description:
       "Completed Bachelor of Engineering in Information Technology, building a strong foundation in computer science, data structures, algorithms, and web technologies.",
     tech: ["JavaScript", "HTML", "CSS", "Data Structures"],
-    accent: "bg-amber",
+    accent: "bg-cyan",
   },
 ];
 

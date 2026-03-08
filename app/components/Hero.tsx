@@ -100,7 +100,7 @@ export default function Hero() {
               {/* Status card */}
               <div className="bg-surface border border-border rounded-2xl p-6 space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-violet rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-cyan rounded-full animate-pulse" />
                   <span className="text-sm text-muted">
                     Based in Pune, India
                   </span>

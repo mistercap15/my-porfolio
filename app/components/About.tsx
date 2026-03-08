@@ -22,7 +22,7 @@ const highlights = [
   {
     label: "State & Data",
     description: "Redux Toolkit, Context API, MongoDB for robust data flow",
-    color: "bg-amber/10 text-amber border-amber/20",
+    color: "bg-cyan/10 text-cyan border-cyan/20",
   },
 ];
 
