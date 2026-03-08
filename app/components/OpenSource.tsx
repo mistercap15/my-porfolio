@@ -3,27 +3,36 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const personalProjects = [
+const sideProjects = [
   {
-    project: "Bhagavad Gita App",
+    name: "bhagavad-gita-app",
     description:
-      "A mobile app bringing the Bhagavad Gita to modern devices with chapter-wise navigation and verse explanations",
-    tech: "React Native + Expo",
-    link: "https://github.com",
+      "A cross-platform mobile app for reading the Bhagavad Gita — all 18 chapters, 700 verses, with bookmarks and a clean reading experience.",
+    stack: "React Native + Expo",
+    stars: "12",
+    forks: "3",
+    color: "text-yellow",
+    borderColor: "border-yellow/20",
   },
   {
-    project: "Zu Chat",
+    name: "zu-chat",
     description:
-      "Anonymous real-time chat application built for privacy-first communication with a clean mobile interface",
-    tech: "React Native + Expo",
-    link: "https://github.com",
+      "Real-time chat application with group messaging, multimedia sharing, and push notifications. Built with React Native and Node.js.",
+    stack: "React Native + Expo",
+    stars: "8",
+    forks: "2",
+    color: "text-green",
+    borderColor: "border-green/20",
   },
   {
-    project: "Meta Med",
+    name: "meta-med",
     description:
-      "Healthcare platform for doctors and GPs to manage patient appointments and track medical reports in real-time",
-    tech: "React + Context API",
-    link: "https://github.com",
+      "Medical records management system for clinics. Patient data, appointments, and history in one clean dashboard.",
+    stack: "React + Context API",
+    stars: "5",
+    forks: "1",
+    color: "text-blue",
+    borderColor: "border-blue/20",
   },
 ];
 
@@ -32,59 +41,87 @@ export default function OpenSource() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    <section className="py-28 relative bg-surface">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+          transition={{ duration: 0.5 }}
+          className="mb-14"
         >
-          <span className="text-sm font-mono text-orange tracking-wider uppercase">
-            05 / Side Projects
-          </span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            Beyond work<span className="text-orange">.</span>
+          <span className="text-xs text-comment">{"// section.05"}</span>
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+            <span className="text-green">sideProjects</span>
+            <span className="text-foreground">()</span>
+            <span className="cursor-blink text-green ml-1">_</span>
           </h2>
-          <div className="section-separator mt-6" />
+          <div className="section-separator mt-4" />
+          <p className="text-sm text-comment mt-4">
+            $ gh repo list --source --sort=stars
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {personalProjects.map((item, i) => (
-            <motion.a
-              key={item.project}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
+        <div className="grid md:grid-cols-3 gap-5">
+          {sideProjects.map((project, i) => (
+            <motion.div
+              key={project.name}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-              whileHover={{ y: -6, scale: 1.02 }}
-              className="group block bg-surface border border-border rounded-2xl p-6 hover:border-orange/40 hover:shadow-lg transition-all"
+              transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
+              whileHover={{ y: -4 }}
+              className={`group bg-background border ${project.borderColor} rounded-lg p-5 hover:border-green/40 transition-all`}
             >
-              <div className="flex items-start justify-between mb-4">
+              {/* Repo header */}
+              <div className="flex items-center gap-2 mb-3">
                 <svg
-                  className="w-8 h-8 text-muted group-hover:text-orange transition-colors"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
+                  className="w-4 h-4 text-muted"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
                 >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                  <path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8.5V1.5zm-8 11a1 1 0 001-1h6.5v2H4.5a1 1 0 01-1-1z" />
                 </svg>
-                <span className="text-xs font-mono text-muted px-2 py-0.5 bg-background rounded">
-                  {item.tech}
+                <span
+                  className={`text-sm font-bold ${project.color} group-hover:text-green transition-colors`}
+                >
+                  {project.name}
                 </span>
               </div>
-              <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg group-hover:text-orange transition-colors">
-                {item.project}
-              </h3>
-              <p className="text-sm text-muted mt-2 leading-relaxed">
-                {item.description}
+
+              <p className="text-xs text-muted leading-relaxed mb-4">
+                {project.description}
               </p>
-            </motion.a>
+
+              {/* Footer info */}
+              <div className="flex items-center justify-between text-xs">
+                <span className="px-2 py-0.5 bg-surface border border-border rounded-sm text-comment">
+                  {project.stack}
+                </span>
+                <div className="flex items-center gap-3 text-comment">
+                  <span className="flex items-center gap-1">
+                    <svg
+                      className="w-3 h-3"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z" />
+                    </svg>
+                    {project.stars}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <svg
+                      className="w-3 h-3"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z" />
+                    </svg>
+                    {project.forks}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -3,26 +3,48 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-const highlights = [
+const codeBlock = `{
+  "name": "khilan-patel",
+  "version": "3.0.0",
+  "description": "Software Engineer",
+  "location": "Ireland",
+  "education": "B.E. Information Technology",
+  "interests": [
+    "web-development",
+    "mobile-apps",
+    "clean-architecture",
+    "open-source"
+  ]
+}`;
+
+const specializations = [
   {
-    label: "Frontend",
-    description: "React, Next.js, Vue.js, Nuxt.js with responsive, pixel-perfect UI",
-    color: "bg-orange/10 text-orange border-orange/20",
+    keyword: "const",
+    name: "frontend",
+    value: '["React", "Next.js", "Vue.js", "Nuxt.js"]',
+    color: "text-blue",
+    keyColor: "text-purple",
   },
   {
-    label: "Backend",
-    description: "Node.js, Express — REST APIs and server-side logic",
-    color: "bg-coral/10 text-warm border-coral/20",
+    keyword: "const",
+    name: "backend",
+    value: '["Node.js", "Express", "MongoDB"]',
+    color: "text-green",
+    keyColor: "text-purple",
   },
   {
-    label: "Mobile",
-    description: "React Native & Expo for cross-platform mobile apps",
-    color: "bg-electric/10 text-electric border-electric/20",
+    keyword: "const",
+    name: "mobile",
+    value: '["React Native", "Expo"]',
+    color: "text-cyan",
+    keyColor: "text-purple",
   },
   {
-    label: "State & Data",
-    description: "Redux Toolkit, Context API, MongoDB for robust data flow",
-    color: "bg-cyan/10 text-cyan border-cyan/20",
+    keyword: "const",
+    name: "stateManagement",
+    value: '["Redux Toolkit", "Pinia", "Context API"]',
+    color: "text-yellow",
+    keyColor: "text-purple",
   },
 ];
 
@@ -32,71 +54,139 @@ export default function About() {
 
   return (
     <section id="about" className="py-28 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-16">
-          {/* Left side - label */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-4"
-          >
-            <div className="lg:sticky lg:top-28">
-              <span className="text-sm font-mono text-orange tracking-wider uppercase">
-                01 / About
-              </span>
-              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4 leading-tight">
-                A bit about
-                <br />
-                myself<span className="text-orange">.</span>
-              </h2>
-              <div className="section-separator mt-6" />
-            </div>
-          </motion.div>
-
-          {/* Right side - content */}
-          <div className="lg:col-span-8 space-y-10">
+        <div className="grid lg:grid-cols-12 gap-12">
+          {/* Left — section header */}
+          <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-6"
+              transition={{ duration: 0.5 }}
             >
-              <p className="text-lg text-muted leading-relaxed">
-                I&apos;m Khilan Patel, a passionate React.js developer based in
-                Pune, India. I hold a B.E. in Information Technology from
-                Sinhgad College of Engineering, Pune. I thrive on turning complex
-                problems into clean, performant web and mobile applications.
-              </p>
-              <p className="text-lg text-muted leading-relaxed">
-                My approach is rooted in collaboration — working closely with
-                back-end developers, project managers, and clients to deliver
-                tailored solutions. I&apos;m always eager to learn and implement
-                new technologies to enhance development efficiency and product
-                quality.
+              <span className="text-xs text-comment">{"// section.01"}</span>
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+                <span className="text-purple">about</span>
+                <span className="text-foreground">()</span>
+                <span className="cursor-blink text-green ml-1">_</span>
+              </h2>
+              <div className="section-separator mt-4" />
+              <p className="text-muted mt-6 text-sm leading-relaxed">
+                <span className="text-comment">/**</span>
+                <br />
+                <span className="text-comment">
+                  {" "}* A developer who loves building
+                </span>
+                <br />
+                <span className="text-comment">
+                  {" "}* things that live on the internet.
+                </span>
+                <br />
+                <span className="text-comment">{" */"}</span>
               </p>
             </motion.div>
+          </div>
 
-            {/* Highlight blocks */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {highlights.map((item, i) => (
-                <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                  whileHover={{ y: -4 }}
-                  className={`p-5 rounded-xl border ${item.color} transition-shadow hover:shadow-lg`}
-                >
-                  <h3 className="font-semibold font-[family-name:var(--font-space-grotesk)] text-lg mb-1">
-                    {item.label}
-                  </h3>
-                  <p className="text-sm opacity-80">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
+          {/* Right — code content */}
+          <div className="lg:col-span-8 space-y-6">
+            {/* package.json style card */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-surface border border-border rounded-lg overflow-hidden"
+            >
+              <div className="flex items-center gap-2 px-4 py-2 bg-panel border-b border-border">
+                <span className="text-xs text-yellow">{"{ }"}</span>
+                <span className="text-xs text-muted">
+                  package.json — developer profile
+                </span>
+              </div>
+              <pre className="p-5 text-sm leading-relaxed overflow-x-auto">
+                <code>
+                  {codeBlock.split("\n").map((line, i) => (
+                    <div key={i} className="flex">
+                      <span className="text-line-number w-6 text-right mr-4 select-none text-xs">
+                        {i + 1}
+                      </span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: line
+                            .replace(
+                              /"([^"]+)":/g,
+                              '<span class="text-blue">"$1"</span>:'
+                            )
+                            .replace(
+                              /: "([^"]+)"/g,
+                              ': <span class="text-green">"$1"</span>'
+                            )
+                            .replace(
+                              /"([^"]+)"(,?)\s*$/g,
+                              '<span class="text-green">"$1"</span>$2'
+                            ),
+                        }}
+                      />
+                    </div>
+                  ))}
+                </code>
+              </pre>
+            </motion.div>
+
+            {/* Bio paragraphs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-surface border border-border rounded-lg p-5"
+            >
+              <p className="text-comment text-sm mb-1">{"/* README.md */"}</p>
+              <div className="space-y-3 text-sm text-muted leading-relaxed mt-3">
+                <p>
+                  I&apos;m a{" "}
+                  <span className="text-green">Software Engineer</span> based in
+                  Ireland with <span className="text-blue">3+ years</span> of
+                  experience crafting web and mobile applications. I specialize
+                  in <span className="text-blue">React.js</span>,{" "}
+                  <span className="text-purple">Next.js</span>,{" "}
+                  <span className="text-cyan">Vue.js</span>, and{" "}
+                  <span className="text-yellow">React Native</span> — building
+                  apps people actually enjoy using.
+                </p>
+                <p>
+                  From responsive dashboards to cross-platform mobile apps,
+                  I&apos;m passionate about clean code, thoughtful UX, and
+                  shipping features that make a real difference for users.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Specializations as variable declarations */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="bg-surface border border-border rounded-lg overflow-hidden"
+            >
+              <div className="flex items-center gap-2 px-4 py-2 bg-panel border-b border-border">
+                <span className="text-xs text-purple">TS</span>
+                <span className="text-xs text-muted">specializations.ts</span>
+              </div>
+              <div className="p-5 space-y-2.5">
+                {specializations.map((spec, i) => (
+                  <div key={i} className="flex items-start gap-0 text-sm">
+                    <span className="text-line-number w-6 text-right mr-4 select-none text-xs">
+                      {i + 1}
+                    </span>
+                    <span>
+                      <span className={spec.keyColor}>{spec.keyword}</span>{" "}
+                      <span className="text-foreground">{spec.name}</span>
+                      <span className="text-muted"> = </span>
+                      <span className={spec.color}>{spec.value}</span>
+                      <span className="text-muted">;</span>
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </div>

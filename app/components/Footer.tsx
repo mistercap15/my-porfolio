@@ -1,53 +1,59 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-const footerLinks = [
-  { label: "GitHub", href: "https://github.com/mistercap15" },
-  {
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/khilan-patel-4417b196",
-  },
-  { label: "Twitter", href: "https://twitter.com" },
-];
-
 export default function Footer() {
   return (
-    <footer className="py-12 relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+    <footer className="border-t border-border bg-background">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Logo */}
+          <div className="flex items-center gap-1 text-sm">
+            <span className="text-comment">~/</span>
+            <span className="text-green">khilan</span>
+            <span className="text-muted">.dev</span>
+          </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
+          {/* Center */}
+          <p className="text-xs text-comment text-center">
+            {"/* "}Crafted with clean code & caffeine{" */"}
+          </p>
+
+          {/* Right */}
+          <div className="flex items-center gap-4">
             <a
-              href="#"
-              className="font-[family-name:var(--font-space-grotesk)] text-lg font-bold"
+              href="https://github.com/khilanpatel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-green transition-colors text-xs"
             >
-              <span className="text-orange">khilan</span>
-              <span className="text-foreground">.dev</span>
+              github
             </a>
-            <span className="text-muted text-sm">
-              &copy; {new Date().getFullYear()}
+            <span className="text-border">|</span>
+            <a
+              href="https://linkedin.com/in/khilanpatel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-green transition-colors text-xs"
+            >
+              linkedin
+            </a>
+            <span className="text-border">|</span>
+            <a
+              href="https://twitter.com/khilanpatel"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted hover:text-green transition-colors text-xs"
+            >
+              twitter
+            </a>
+          </div>
+        </div>
+
+        <div className="mt-6 pt-4 border-t border-border/50 text-center">
+          <p className="text-xs text-comment">
+            &copy; {new Date().getFullYear()} Khilan Patel.{" "}
+            <span className="text-muted">
+              process.exit(0)
             </span>
-          </div>
-
-          <div className="flex items-center gap-6">
-            {footerLinks.map((link) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-                className="text-sm text-muted hover:text-orange transition-colors link-underline"
-              >
-                {link.label}
-              </motion.a>
-            ))}
-          </div>
-
-          <p className="text-xs text-muted">
-            Crafted with care & clean code.
           </p>
         </div>
       </div>
