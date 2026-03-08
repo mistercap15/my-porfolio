@@ -53,10 +53,38 @@ export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError("");
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/khilanpatel15@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          message: formData.get("message"),
+          _subject: `Portfolio Contact: ${formData.get("name")}`,
+        }),
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please try again later.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -186,13 +214,17 @@ export default function Contact() {
                     placeholder="Tell me about your project..."
                   />
                 </div>
+                {error && (
+                  <p className="text-sm text-red-600">{error}</p>
+                )}
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto px-8 py-3 bg-orange text-white rounded-xl font-medium text-sm hover:bg-orange-dark transition-colors"
+                  disabled={sending}
+                  whileHover={{ scale: sending ? 1 : 1.02 }}
+                  whileTap={{ scale: sending ? 1 : 0.98 }}
+                  className="w-full sm:w-auto px-8 py-3 bg-orange text-white rounded-xl font-medium text-sm hover:bg-orange-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {sending ? "Sending..." : "Send Message"}
                 </motion.button>
               </form>
             )}

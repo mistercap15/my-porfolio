@@ -19,6 +19,13 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="min-h-screen relative overflow-hidden">
       {/* Background decoration */}
@@ -72,25 +79,41 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-wrap gap-4 pt-2">
-              <a
-                href="#projects"
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-lg font-medium text-sm hover:bg-foreground/90 transition-colors"
+              <button
+                onClick={() => scrollTo("projects")}
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-lg font-medium text-sm hover:bg-foreground/90 transition-colors cursor-pointer"
               >
                 View Projects
-                <motion.span
-                  className="inline-block"
-                  whileHover={{ x: 4 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
+                <span className="inline-block group-hover:translate-x-1 transition-transform">
                   &rarr;
-                </motion.span>
-              </a>
+                </span>
+              </button>
               <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium text-sm hover:border-orange hover:text-orange transition-colors"
+                href="/resume.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 bg-orange text-white rounded-lg font-medium text-sm hover:bg-orange-dark transition-colors"
+              >
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download CV
+              </a>
+              <button
+                onClick={() => scrollTo("contact")}
+                className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-medium text-sm hover:border-orange hover:text-orange transition-colors cursor-pointer"
               >
                 Contact Me
-              </a>
+              </button>
             </motion.div>
           </div>
 
