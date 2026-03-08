@@ -62,11 +62,11 @@ export default function Contact() {
                 <div className="space-y-2 pt-4">
                   <div className="flex items-center gap-3">
                     <span className="text-comment">location:</span>
-                    <span className="text-foreground">Ireland</span>
+                    <span className="text-foreground">India</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-comment">phone:</span>
-                    <span className="text-green">+353 892458875</span>
+                    <span className="text-green">+91 9527785556</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-comment">email:</span>

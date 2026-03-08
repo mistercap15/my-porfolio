@@ -206,7 +206,7 @@ export default function Hero() {
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-comment">location:</span>
-                  <span className="text-foreground">Ireland</span>
+                  <span className="text-foreground">India</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-comment">experience:</span>

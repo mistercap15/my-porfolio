@@ -7,7 +7,7 @@ const codeBlock = `{
   "name": "khilan-patel",
   "version": "3.0.0",
   "description": "Software Engineer",
-  "location": "Ireland",
+  "location": "India",
   "education": "B.E. Information Technology",
   "interests": [
     "web-development",
@@ -143,7 +143,7 @@ export default function About() {
                 <p>
                   I&apos;m a{" "}
                   <span className="text-green">Software Engineer</span> based in
-                  Ireland with <span className="text-blue">3+ years</span> of
+                  India with <span className="text-blue">3+ years</span> of
                   experience crafting web and mobile applications. I specialize
                   in <span className="text-blue">React.js</span>,{" "}
                   <span className="text-purple">Next.js</span>,{" "}
