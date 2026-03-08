@@ -1,6 +1,7 @@
 "use client";
 
 import ScrollProgress from "./components/ScrollProgress";
+import MatrixRain from "./components/MatrixRain";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -15,6 +16,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
+      <MatrixRain />
       <ScrollProgress />
       <Navbar />
       <main>

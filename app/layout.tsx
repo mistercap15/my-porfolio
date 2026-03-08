@@ -26,7 +26,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-mono antialiased scanline-overlay">{children}</body>
+      <body className="font-mono antialiased">{children}</body>
     </html>
   );
 }
