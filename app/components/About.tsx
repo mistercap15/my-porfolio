@@ -53,9 +53,9 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-28 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-12">
+    <section id="about" className="py-20 sm:py-24 lg:py-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="grid lg:grid-cols-12 gap-8 sm:gap-12 [&>*]:min-w-0">
           {/* Left — section header */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <motion.div
@@ -64,7 +64,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-xs text-comment">{"// section.01"}</span>
-              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
                 <span className="text-purple">about</span>
                 <span className="text-foreground">()</span>
                 <span className="cursor-blink text-green ml-1">_</span>
