@@ -59,18 +59,18 @@ export default function Experience() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="experience" className="py-28 relative bg-surface">
+    <section id="experience" className="py-16 sm:py-20 lg:py-28 relative bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="text-xs text-comment">{"// section.04"}</span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
             <span className="text-cyan">experience</span>
             <span className="text-foreground">()</span>
             <span className="cursor-blink text-green ml-1">_</span>
@@ -92,9 +92,9 @@ export default function Experience() {
               className="relative group"
             >
               {/* Git graph line */}
-              <div className="flex gap-4">
+              <div className="flex gap-2 sm:gap-4">
                 {/* Graph visualization */}
-                <div className="flex flex-col items-center shrink-0 w-8">
+                <div className="flex flex-col items-center shrink-0 w-6 sm:w-8">
                   <div
                     className={`w-3 h-3 rounded-full ${commit.dotColor} ring-2 ring-background z-10 group-hover:scale-125 transition-transform`}
                   />
@@ -104,7 +104,7 @@ export default function Experience() {
                 </div>
 
                 {/* Commit content */}
-                <div className="bg-background border border-border rounded-lg p-5 mb-4 flex-1 group-hover:border-green/20 transition-colors">
+                <div className="bg-background border border-border rounded-lg p-3 sm:p-5 mb-4 flex-1 group-hover:border-green/20 transition-colors">
                   {/* Commit header */}
                   <div className="flex flex-wrap items-center gap-2 text-xs mb-3">
                     <span className="text-yellow font-mono">
@@ -119,7 +119,7 @@ export default function Experience() {
                   </div>
 
                   {/* Role & company */}
-                  <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg">
+                  <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-base sm:text-lg">
                     <span className="text-foreground">{commit.role}</span>
                     <span className="text-muted"> @ </span>
                     <span className={commit.color}>{commit.company}</span>
@@ -151,7 +151,7 @@ export default function Experience() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1.2 }}
-          className="mt-6 ml-12 text-xs text-comment"
+          className="mt-6 ml-8 sm:ml-12 text-xs text-comment"
         >
           {"// "}End of git log — {commits.length} commits shown
         </motion.div>

@@ -28,11 +28,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-28 relative bg-surface">
+    <section id="contact" className="py-16 sm:py-20 lg:py-28 relative bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
           {/* Left */}
           <div className="lg:col-span-5">
             <motion.div
@@ -41,14 +41,14 @@ export default function Contact() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-xs text-comment">{"// section.07"}</span>
-              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
                 <span className="text-red">contact</span>
                 <span className="text-foreground">()</span>
                 <span className="cursor-blink text-green ml-1">_</span>
               </h2>
               <div className="section-separator mt-4" />
 
-              <div className="mt-8 space-y-4 text-sm">
+              <div className="mt-5 sm:mt-8 space-y-4 text-sm">
                 <p className="text-comment">
                   {"/**"}
                   <br />
@@ -160,7 +160,7 @@ export default function Contact() {
               </div>
 
               {status === "sent" ? (
-                <div className="p-8 text-center">
+                <div className="p-4 sm:p-8 text-center">
                   <p className="text-green text-sm mb-2">
                     {">"} Message sent successfully!
                   </p>
@@ -175,7 +175,7 @@ export default function Contact() {
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="p-5 space-y-4">
+                <form onSubmit={handleSubmit} className="p-3 sm:p-5 space-y-4">
                   <div>
                     <label className="text-xs text-comment mb-1.5 block">
                       const name =
@@ -212,7 +212,7 @@ export default function Contact() {
                     </label>
                     <textarea
                       required
-                      rows={5}
+                      rows={4}
                       value={form.message}
                       onChange={(e) =>
                         setForm({ ...form, message: e.target.value })

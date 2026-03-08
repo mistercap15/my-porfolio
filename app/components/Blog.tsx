@@ -24,16 +24,16 @@ export default function Blog() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="blog" className="py-28 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="blog" className="py-16 sm:py-20 lg:py-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="text-xs text-comment">{"// section.06"}</span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
             <span className="text-orange">blog</span>
             <span className="text-foreground">()</span>
             <span className="cursor-blink text-green ml-1">_</span>
@@ -71,7 +71,7 @@ export default function Blog() {
                   <span className="text-xs text-comment">{post.readTime}</span>
                 </div>
 
-                <div className="p-5">
+                <div className="p-3 sm:p-5">
                   <div className="flex items-center gap-2 text-xs text-comment mb-3">
                     <time>{post.date}</time>
                   </div>

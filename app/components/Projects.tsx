@@ -83,16 +83,16 @@ export default function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="py-28 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+    <section id="projects" className="py-16 sm:py-20 lg:py-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="text-xs text-comment">{"// section.03"}</span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
             <span className="text-blue">projects</span>
             <span className="text-foreground">()</span>
             <span className="cursor-blink text-green ml-1">_</span>
@@ -161,8 +161,8 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-5">
-                <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-lg group-hover:text-green transition-colors">
+              <div className="p-3 sm:p-5">
+                <h3 className="font-[family-name:var(--font-space-grotesk)] font-bold text-base sm:text-lg group-hover:text-green transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-sm text-muted mt-2 leading-relaxed">

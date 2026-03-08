@@ -32,7 +32,7 @@ export default function BlogPost() {
     <div className="min-h-screen">
       {/* Top nav bar */}
       <nav className="fixed top-0 left-0 right-0 z-40 bg-surface/90 backdrop-blur-xl border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 h-14 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
           <Link
             href="/#blog"
             className="inline-flex items-center gap-2 text-sm text-muted hover:text-green transition-colors"
@@ -53,7 +53,7 @@ export default function BlogPost() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-4xl mx-auto px-6 lg:px-8 pt-28 pb-20"
+        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-28 pb-12 sm:pb-20"
       >
         {/* File header */}
         <div className="bg-surface border border-border rounded-lg overflow-hidden mb-8">
@@ -68,7 +68,7 @@ export default function BlogPost() {
             </span>
           </div>
 
-          <div className="p-6">
+          <div className="p-4 sm:p-6">
             {/* Meta */}
             <div className="flex items-center gap-3 text-xs text-comment mb-4">
               <time>{post.date}</time>
@@ -122,7 +122,7 @@ export default function BlogPost() {
                   <div className="flex items-center gap-2 px-4 py-1.5 bg-panel border-b border-border">
                     <span className="text-xs text-comment">{lang}</span>
                   </div>
-                  <pre className="p-5 overflow-x-auto text-sm leading-relaxed">
+                  <pre className="p-3 sm:p-5 overflow-x-auto text-xs sm:text-sm leading-relaxed">
                     <code className="text-foreground">{code}</code>
                   </pre>
                 </div>

@@ -41,18 +41,18 @@ export default function OpenSource() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-28 relative bg-surface">
+    <section className="py-16 sm:py-20 lg:py-28 relative bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="text-xs text-comment">{"// section.05"}</span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
             <span className="text-green">sideProjects</span>
             <span className="text-foreground">()</span>
             <span className="cursor-blink text-green ml-1">_</span>
@@ -63,7 +63,7 @@ export default function OpenSource() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5">
           {sideProjects.map((project, i) => (
             <motion.div
               key={project.name}
@@ -71,7 +71,7 @@ export default function OpenSource() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 + i * 0.1 }}
               whileHover={{ y: -4 }}
-              className={`group bg-background border ${project.borderColor} rounded-lg p-5 hover:border-green/40 transition-all`}
+              className={`group bg-background border ${project.borderColor} rounded-lg p-4 sm:p-5 hover:border-green/40 transition-all`}
             >
               {/* Repo header */}
               <div className="flex items-center gap-2 mb-3">

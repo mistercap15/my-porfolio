@@ -24,18 +24,18 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="skills" className="py-28 relative bg-surface">
+    <section id="skills" className="py-16 sm:py-20 lg:py-28 relative bg-surface">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green/20 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-14"
+          className="mb-8 sm:mb-14"
         >
           <span className="text-xs text-comment">{"// section.02"}</span>
-          <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+          <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
             <span className="text-yellow">skills</span>
             <span className="text-foreground">()</span>
             <span className="cursor-blink text-green ml-1">_</span>
@@ -60,7 +60,7 @@ export default function Skills() {
               terminal — npm install
             </span>
           </div>
-          <div className="p-5 text-sm">
+          <div className="p-3 sm:p-5 text-sm">
             <p className="text-green mb-1">
               $ npm install khilan-patel-skills
             </p>
@@ -75,7 +75,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Skill dependency tree */}
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-1">
+        <div className="grid md:grid-cols-2 gap-x-4 sm:gap-x-8 gap-y-1">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.name}

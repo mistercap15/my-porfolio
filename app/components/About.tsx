@@ -53,9 +53,9 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-28 relative">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8" ref={ref}>
-        <div className="grid lg:grid-cols-12 gap-12">
+    <section id="about" className="py-16 sm:py-20 lg:py-28 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+        <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12">
           {/* Left — section header */}
           <div className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <motion.div
@@ -64,7 +64,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
             >
               <span className="text-xs text-comment">{"// section.01"}</span>
-              <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-2">
+              <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
                 <span className="text-purple">about</span>
                 <span className="text-foreground">()</span>
                 <span className="cursor-blink text-green ml-1">_</span>
@@ -101,7 +101,7 @@ export default function About() {
                   package.json — developer profile
                 </span>
               </div>
-              <pre className="p-5 text-sm leading-relaxed overflow-x-auto">
+              <pre className="p-3 sm:p-5 text-xs sm:text-sm leading-relaxed overflow-x-auto">
                 <code>
                   {codeBlock.split("\n").map((line, i) => (
                     <div key={i} className="flex">
@@ -136,7 +136,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-surface border border-border rounded-lg p-5"
+              className="bg-surface border border-border rounded-lg p-3 sm:p-5"
             >
               <p className="text-comment text-sm mb-1">{"/* README.md */"}</p>
               <div className="space-y-3 text-sm text-muted leading-relaxed mt-3">
@@ -170,9 +170,9 @@ export default function About() {
                 <span className="text-xs text-purple">TS</span>
                 <span className="text-xs text-muted">specializations.ts</span>
               </div>
-              <div className="p-5 space-y-2.5">
+              <div className="p-3 sm:p-5 space-y-2.5">
                 {specializations.map((spec, i) => (
-                  <div key={i} className="flex items-start gap-0 text-sm">
+                  <div key={i} className="flex items-start gap-0 text-xs sm:text-sm">
                     <span className="text-line-number w-6 text-right mr-4 select-none text-xs">
                       {i + 1}
                     </span>

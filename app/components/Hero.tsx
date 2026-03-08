@@ -45,8 +45,8 @@ export default function Hero() {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-blue/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 w-full">
+        <div className="grid lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Left — Terminal */}
           <div className="lg:col-span-7">
             <motion.div
@@ -68,7 +68,7 @@ export default function Hero() {
               </div>
 
               {/* Terminal content */}
-              <div className="p-5 lg:p-6 space-y-3 text-sm lg:text-base">
+              <div className="p-3 sm:p-5 lg:p-6 space-y-3 text-xs sm:text-sm lg:text-base">
                 <div>
                   <span className="text-green">khilan@dev</span>
                   <span className="text-muted">:</span>
@@ -138,11 +138,11 @@ export default function Hero() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 3.2 }}
-                      className="flex flex-wrap gap-3 pt-1"
+                      className="flex flex-wrap gap-2 sm:gap-3 pt-1"
                     >
                       <a
                         href="#projects"
-                        className="px-4 py-2 bg-green/10 border border-green/40 text-green text-sm rounded-sm hover:bg-green/20 transition-all group"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-green/10 border border-green/40 text-green text-xs sm:text-sm rounded-sm hover:bg-green/20 transition-all group"
                       >
                         <span className="text-comment group-hover:text-green">
                           ./
@@ -152,7 +152,7 @@ export default function Hero() {
                       <a
                         href="/Khilan_Patel_CV.pdf"
                         target="_blank"
-                        className="px-4 py-2 bg-blue/10 border border-blue/30 text-blue text-sm rounded-sm hover:bg-blue/20 transition-all group"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-blue/10 border border-blue/30 text-blue text-xs sm:text-sm rounded-sm hover:bg-blue/20 transition-all group"
                       >
                         <span className="text-comment group-hover:text-blue">
                           ./
@@ -161,7 +161,7 @@ export default function Hero() {
                       </a>
                       <a
                         href="#contact"
-                        className="px-4 py-2 bg-purple/10 border border-purple/30 text-purple text-sm rounded-sm hover:bg-purple/20 transition-all group"
+                        className="px-3 sm:px-4 py-1.5 sm:py-2 bg-purple/10 border border-purple/30 text-purple text-xs sm:text-sm rounded-sm hover:bg-purple/20 transition-all group"
                       >
                         <span className="text-comment group-hover:text-purple">
                           ./
@@ -195,15 +195,15 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1 }}
             className="lg:col-span-5 space-y-4"
           >
-            <div className="bg-surface border border-border rounded-lg p-5">
-              <div className="flex items-center gap-2 mb-4">
+            <div className="bg-surface border border-border rounded-lg p-4 sm:p-5">
+              <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
                 <span className="text-xs text-green uppercase tracking-widest">
                   System Status
                 </span>
               </div>
 
-              <div className="space-y-3 text-sm">
+              <div className="space-y-2 sm:space-y-3 text-sm">
                 <div className="flex justify-between">
                   <span className="text-comment">location:</span>
                   <span className="text-foreground">India</span>
@@ -227,7 +227,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <div className="bg-surface border border-border rounded-lg p-5">
+            <div className="bg-surface border border-border rounded-lg p-4 sm:p-5">
               <p className="text-xs text-comment mb-3">
                 // tech_stack.config
               </p>
@@ -265,7 +265,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 4 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden sm:flex"
         >
           <span className="text-xs text-comment">scroll_down</span>
           <motion.div
