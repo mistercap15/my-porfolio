@@ -29,10 +29,10 @@ export default function Hero() {
   return (
     <section className="min-h-screen relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-20 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-coral/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-coral/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-32 pb-20 relative z-10">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -172,7 +172,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 pointer-events-none"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
