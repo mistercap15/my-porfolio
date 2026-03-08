@@ -7,7 +7,7 @@ const highlights = [
   {
     label: "Frontend",
     description: "React, Next.js, Vue.js, Nuxt.js with responsive, pixel-perfect UI",
-    color: "bg-teal/10 text-teal border-teal/20",
+    color: "bg-violet/10 text-violet border-violet/20",
   },
   {
     label: "Backend",
@@ -44,13 +44,13 @@ export default function About() {
             className="lg:col-span-4"
           >
             <div className="lg:sticky lg:top-28">
-              <span className="text-sm font-mono text-teal tracking-wider uppercase">
+              <span className="text-sm font-mono text-violet tracking-wider uppercase">
                 01 / About
               </span>
               <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4 leading-tight">
                 A bit about
                 <br />
-                myself<span className="text-teal">.</span>
+                myself<span className="text-violet">.</span>
               </h2>
               <div className="section-separator mt-6" />
             </div>
@@ -66,7 +66,7 @@ export default function About() {
             >
               <p className="text-lg text-muted leading-relaxed">
                 I&apos;m Khilan Patel, a passionate React.js developer based in
-                Ahmedabad, India. I hold a B.E. in Information Technology from
+                Pune, India. I hold a B.E. in Information Technology from
                 Sinhgad College of Engineering, Pune. I thrive on turning complex
                 problems into clean, performant web and mobile applications.
               </p>

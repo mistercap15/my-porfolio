@@ -11,8 +11,8 @@ const projects = [
     tech: ["React", "Context API", "Bootstrap", "Stripe", "Apex Charts"],
     github: "https://github.com",
     live: "https://example.com",
-    accent: "border-teal",
-    accentBg: "bg-teal/5",
+    accent: "border-violet",
+    accentBg: "bg-violet/5",
     number: "01",
   },
   {
@@ -55,8 +55,8 @@ const projects = [
     tech: ["React", "Context API", "Bootstrap"],
     github: "https://github.com",
     live: "https://example.com",
-    accent: "border-teal",
-    accentBg: "bg-teal/5",
+    accent: "border-violet",
+    accentBg: "bg-violet/5",
     number: "05",
   },
   {
@@ -88,11 +88,11 @@ export default function Projects() {
           className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6"
         >
           <div>
-            <span className="text-sm font-mono text-teal tracking-wider uppercase">
+            <span className="text-sm font-mono text-violet tracking-wider uppercase">
               03 / Projects
             </span>
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-              Selected work<span className="text-teal">.</span>
+              Selected work<span className="text-violet">.</span>
             </h2>
             <div className="section-separator mt-6" />
           </div>

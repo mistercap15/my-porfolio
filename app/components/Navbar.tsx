@@ -39,7 +39,7 @@ export default function Navbar() {
               href="#"
               className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold tracking-tight"
             >
-              <span className="text-teal">khilan</span>
+              <span className="text-violet">khilan</span>
               <span className="text-foreground">.dev</span>
             </a>
 
@@ -55,7 +55,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#contact"
-                className="text-sm px-4 py-2 bg-teal text-white rounded-lg hover:bg-teal-dark transition-colors"
+                className="text-sm px-4 py-2 bg-violet text-white rounded-lg hover:bg-violet-dark transition-colors"
               >
                 Let&apos;s Talk
               </a>

@@ -11,7 +11,7 @@ const timeline = [
     description:
       "Working as an associate consultant, contributing to enterprise-level projects and delivering scalable solutions for clients across various domains.",
     tech: ["React", "TypeScript", "Next.js"],
-    accent: "bg-teal",
+    accent: "bg-violet",
   },
   {
     year: "Feb 2024 — Sep 2024",
@@ -57,11 +57,11 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-teal tracking-wider uppercase">
+          <span className="text-sm font-mono text-violet tracking-wider uppercase">
             04 / Experience
           </span>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            My journey<span className="text-teal">.</span>
+            My journey<span className="text-violet">.</span>
           </h2>
           <div className="section-separator mt-6" />
         </motion.div>
@@ -97,7 +97,7 @@ export default function Experience() {
                       : "lg:pl-16 lg:col-start-2 lg:text-left"
                   }`}
                 >
-                  <span className="text-xs font-mono text-teal">
+                  <span className="text-xs font-mono text-violet">
                     {item.year}
                   </span>
                   <h3 className="font-[family-name:var(--font-space-grotesk)] text-xl font-bold mt-1">

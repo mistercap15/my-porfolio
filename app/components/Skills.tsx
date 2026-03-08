@@ -8,7 +8,7 @@ const skills = [
     name: "React",
     category: "Frontend",
     level: 95,
-    accent: "bg-teal",
+    accent: "bg-violet",
   },
   {
     name: "Next.js",
@@ -20,13 +20,13 @@ const skills = [
     name: "Vue.js",
     category: "Frontend",
     level: 85,
-    accent: "bg-amber",
+    accent: "bg-coral",
   },
   {
     name: "Nuxt.js",
     category: "Frontend",
     level: 80,
-    accent: "bg-amber",
+    accent: "bg-coral",
   },
   {
     name: "TypeScript",
@@ -44,13 +44,13 @@ const skills = [
     name: "Tailwind CSS",
     category: "Styling",
     level: 90,
-    accent: "bg-teal",
+    accent: "bg-violet",
   },
   {
     name: "Node.js",
     category: "Backend",
     level: 70,
-    accent: "bg-amber",
+    accent: "bg-violet",
   },
   {
     name: "Express",
@@ -74,7 +74,7 @@ const skills = [
     name: "MongoDB",
     category: "Database",
     level: 70,
-    accent: "bg-amber",
+    accent: "bg-electric",
   },
   {
     name: "Redux Toolkit",
@@ -99,11 +99,11 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="text-sm font-mono text-teal tracking-wider uppercase">
+          <span className="text-sm font-mono text-violet tracking-wider uppercase">
             02 / Skills
           </span>
           <h2 className="font-[family-name:var(--font-space-grotesk)] text-4xl lg:text-5xl font-bold mt-4">
-            Tech I work with<span className="text-teal">.</span>
+            Tech I work with<span className="text-violet">.</span>
           </h2>
           <div className="section-separator mt-6" />
         </motion.div>
@@ -124,7 +124,7 @@ export default function Skills() {
                     whileHover={{ scale: 1.1 }}
                     className={`w-2.5 h-2.5 rounded-full ${skill.accent}`}
                   />
-                  <span className="font-[family-name:var(--font-space-grotesk)] font-semibold text-base group-hover:text-teal transition-colors">
+                  <span className="font-[family-name:var(--font-space-grotesk)] font-semibold text-base group-hover:text-violet transition-colors">
                     {skill.name}
                   </span>
                 </div>
