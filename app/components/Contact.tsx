@@ -71,7 +71,7 @@ export default function Contact() {
                   <div className="flex items-center gap-3">
                     <span className="text-comment">email:</span>
                     <span className="text-blue">
-                      khilanpatel015@gmail.com
+                      khilanpatel15@gmail.com
                     </span>
                   </div>
                 </div>
