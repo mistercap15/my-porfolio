@@ -45,7 +45,7 @@ const commits = [
     date: "2017 — 2022",
     branch: "origin/education",
     role: "B.E. Information Technology",
-    company: "Gujarat Technological University",
+    company: "Pune University",
     message:
       "Earned a Bachelor of Engineering in Information Technology. Built a strong foundation in computer science, data structures, algorithms, and software engineering principles.",
     tech: ["Computer Science", "Data Structures", "Algorithms"],
