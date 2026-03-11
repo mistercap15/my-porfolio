@@ -15,7 +15,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
     try {
-      await fetch("https://formsubmit.co/ajax/khilanpatel015@gmail.com", {
+      await fetch("https://formsubmit.co/ajax/khilanpatel15@gmail.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -119,7 +119,7 @@ export default function Contact() {
                     </a>
                   ))}
                   <a
-                    href="mailto:khilanpatel015@gmail.com"
+                    href="mailto:khilanpatel15@gmail.com"
                     className="w-10 h-10 flex items-center justify-center border border-border rounded-sm text-muted hover:text-green hover:border-green/40 transition-all bg-background"
                     aria-label="Email"
                   >
