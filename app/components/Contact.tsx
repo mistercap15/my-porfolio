@@ -10,7 +10,7 @@ export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
     "idle"
   );
-
+console.log('form', form)
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setStatus("sending");
