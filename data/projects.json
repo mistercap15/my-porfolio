@@ -1,0 +1,68 @@
+[
+  {
+    "id": "01",
+    "name": "clinical-q",
+    "title": "Clinical Q",
+    "description": "Healthcare web app enabling clinicians to manage patient queues, appointments, and real-time updates with integrated Stripe payments.",
+    "tech": ["React", "Context API", "Bootstrap", "Stripe"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-blue",
+    "borderColor": "border-blue/30"
+  },
+  {
+    "id": "02",
+    "name": "bhagavad-gita-app",
+    "title": "Bhagavad Gita App",
+    "description": "Cross-platform mobile app for reading all 18 chapters and 700 verses of the Bhagavad Gita with bookmarks, search, and a clean reading experience.",
+    "tech": ["React Native", "Expo", "TypeScript"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-yellow",
+    "borderColor": "border-yellow/30"
+  },
+  {
+    "id": "03",
+    "name": "zu-chat",
+    "title": "Zu Chat",
+    "description": "Real-time messaging app with group chats, multimedia sharing, and push notifications built with a Node.js backend and MongoDB.",
+    "tech": ["React Native", "Node.js", "MongoDB"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-green",
+    "borderColor": "border-green/30"
+  },
+  {
+    "id": "04",
+    "name": "leaving-cert-plus",
+    "title": "Leaving Cert Plus",
+    "description": "Comprehensive study platform for Irish Leaving Cert students with subject resources, quiz modules, progress tracking, and subscription via Stripe.",
+    "tech": ["Nuxt.js", "Pinia", "Bootstrap", "Stripe"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-cyan",
+    "borderColor": "border-cyan/30"
+  },
+  {
+    "id": "05",
+    "name": "u-trade",
+    "title": "uTrade",
+    "description": "Stock trading simulation platform where users can practice buying and selling stocks with virtual currency and real-time market data.",
+    "tech": ["React", "Context API", "Bootstrap"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-purple",
+    "borderColor": "border-purple/30"
+  },
+  {
+    "id": "06",
+    "name": "cj-fallon",
+    "title": "CJ Fallon",
+    "description": "Educational publisher platform for digital textbooks, teacher resources, and interactive learning content for Irish schools.",
+    "tech": ["Nuxt.js", "Pinia", "Bootstrap"],
+    "github": "https://github.com/khilanpatel",
+    "live": "#",
+    "color": "text-orange",
+    "borderColor": "border-orange/30"
+  }
+]
