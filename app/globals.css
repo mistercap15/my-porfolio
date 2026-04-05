@@ -162,3 +162,298 @@ body {
   color: var(--color-line-number);
   font-size: 0.75rem;
 }
+
+/* 3D portfolio redesign */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(50% 40% at 15% 20%, rgba(0, 215, 255, 0.2), transparent 60%),
+    radial-gradient(45% 35% at 85% 0%, rgba(129, 90, 255, 0.22), transparent 60%),
+    linear-gradient(135deg, #05060f 0%, #0a1020 50%, #090915 100%);
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 0.4px, transparent 0.4px);
+  background-size: 3px 3px;
+}
+
+.scene-wrap {
+  perspective: 1200px;
+}
+
+.holo-card,
+.tilt-panel,
+.skill-cube,
+.project-card,
+.exp-card,
+.contact-shell {
+  transform-style: preserve-3d;
+}
+
+.holo-card {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 1rem;
+  padding: 1.3rem;
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.9), rgba(17, 12, 41, 0.76));
+  box-shadow: 0 20px 60px rgba(5, 11, 32, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass-chip {
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  border-radius: 0.7rem;
+  padding: 0.55rem 0.65rem;
+  background: rgba(8, 15, 30, 0.55);
+}
+
+.pill-btn {
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.pill-primary {
+  border: 1px solid rgba(34, 211, 238, 0.5);
+  background: rgba(34, 211, 238, 0.14);
+  color: rgb(165 243 252);
+}
+
+.pill-primary:hover {
+  transform: translateY(-1px);
+  background: rgba(34, 211, 238, 0.23);
+}
+
+.pill-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.4);
+  color: rgb(226 232 240);
+}
+
+.pill-secondary:hover {
+  border-color: rgba(34, 211, 238, 0.6);
+  color: rgb(165 243 252);
+}
+
+.tilt-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .tilt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tilt-panel {
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.78), rgba(18, 25, 45, 0.45));
+  padding: 1.2rem;
+  color: rgb(203 213 225);
+  line-height: 1.65;
+}
+
+.skill-cube {
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 1rem;
+  padding: 1rem;
+  background: linear-gradient(160deg, rgba(12, 20, 40, 0.86), rgba(20, 13, 46, 0.82));
+  box-shadow: 0 12px 30px rgba(3, 8, 25, 0.45);
+}
+
+.project-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.2rem;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.75), rgba(10, 12, 27, 0.8));
+  box-shadow: 0 10px 35px rgba(2, 6, 23, 0.35);
+}
+
+.stack-pill {
+  font-size: 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(103, 232, 249, 0.4);
+  padding: 0.3rem 0.65rem;
+  color: rgb(165 243 252);
+  background: rgba(8, 15, 29, 0.55);
+}
+
+.exp-card,
+.contact-shell {
+  border-radius: 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 1.2rem;
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.72), rgba(13, 12, 28, 0.9));
+  box-shadow: 0 10px 35px rgba(4, 9, 26, 0.4);
+}
+
+/* immersive 3d layer + global 3d card treatment for existing portfolio content */
+.three-scene {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  perspective: 1400px;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(14, 165, 233, 0.2), transparent 35%),
+    radial-gradient(circle at 86% 16%, rgba(168, 85, 247, 0.16), transparent 35%),
+    radial-gradient(circle at 68% 72%, rgba(16, 185, 129, 0.12), transparent 30%);
+}
+
+.three-grid {
+  position: absolute;
+  inset: -20%;
+  background-image:
+    linear-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.1) 1px, transparent 1px);
+  background-size: 70px 70px;
+  transform: rotateX(72deg) translateZ(-280px);
+  transform-origin: center;
+  animation: gridDrift 28s linear infinite;
+  opacity: 0.3;
+}
+
+.three-ring {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  transform-style: preserve-3d;
+}
+
+.three-ring-a {
+  width: min(75vw, 700px);
+  height: min(75vw, 700px);
+  margin-left: calc(min(75vw, 700px) / -2);
+  margin-top: calc(min(75vw, 700px) / -2);
+}
+
+.three-ring-b {
+  width: min(58vw, 520px);
+  height: min(58vw, 520px);
+  margin-left: calc(min(58vw, 520px) / -2);
+  margin-top: calc(min(58vw, 520px) / -2);
+  border-color: rgba(196, 181, 253, 0.38);
+}
+
+.three-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(6, 7, 17, 0.15), rgba(6, 7, 17, 0.72));
+}
+
+main {
+  position: relative;
+  z-index: 2;
+}
+
+nav {
+  backdrop-filter: blur(12px);
+}
+
+section .bg-surface,
+section .bg-background {
+  background: linear-gradient(145deg, rgba(18, 18, 26, 0.78), rgba(13, 13, 22, 0.72)) !important;
+  border-color: rgba(148, 163, 184, 0.22) !important;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transform: translateZ(0);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+section .bg-surface:hover,
+section .bg-background:hover {
+  transform: translateY(-6px) rotateX(3deg) rotateY(-3deg);
+  border-color: rgba(34, 211, 238, 0.32) !important;
+  box-shadow: 0 24px 52px rgba(0, 0, 0, 0.42), 0 0 26px rgba(34, 211, 238, 0.14);
+}
+
+.glow-green {
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.44),
+    0 0 38px rgba(0, 255, 183, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.dot-grid {
+  background-image:
+    radial-gradient(circle at center, rgba(56, 189, 248, 0.2) 1px, transparent 1.4px),
+    linear-gradient(to bottom right, rgba(15, 23, 42, 0.45), transparent);
+  background-size: 26px 26px, 100% 100%;
+}
+
+@keyframes gridDrift {
+  0% { transform: rotateX(72deg) translate3d(0, 0, -280px); }
+  100% { transform: rotateX(72deg) translate3d(0, 70px, -280px); }
+}
+
+/* Three.js hero model container */
+.three-hero-canvas {
+  position: relative;
+  width: 100%;
+  min-height: 320px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(34, 211, 238, 0.24);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(34, 211, 238, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.14), transparent 50%),
+    rgba(5, 10, 20, 0.55);
+}
+
+.three-hero-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+}
+
+.three-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: rgba(4, 8, 18, 0.72);
+  color: #8be9fd;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.three-fallback-cube {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  transform-style: preserve-3d;
+  animation: fallbackSpin 5s linear infinite;
+}
+
+.three-fallback-cube span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(34, 211, 238, 0.7);
+  background: linear-gradient(145deg, rgba(34, 211, 238, 0.22), rgba(167, 139, 250, 0.1));
+}
+
+.three-fallback-cube .front { transform: translateZ(32px); }
+.three-fallback-cube .back { transform: rotateY(180deg) translateZ(32px); }
+.three-fallback-cube .right { transform: rotateY(90deg) translateZ(32px); }
+.three-fallback-cube .left { transform: rotateY(-90deg) translateZ(32px); }
+.three-fallback-cube .top { transform: rotateX(90deg) translateZ(32px); }
+.three-fallback-cube .bottom { transform: rotateX(-90deg) translateZ(32px); }
+
+@keyframes fallbackSpin {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}

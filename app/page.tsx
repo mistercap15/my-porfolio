@@ -2,6 +2,7 @@
 
 import ScrollProgress from "./components/ScrollProgress";
 import MatrixRain from "./components/MatrixRain";
+import ThreeScene from "./components/ThreeScene";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -16,6 +17,7 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
+      <ThreeScene />
       <MatrixRain />
       <ScrollProgress />
       <Navbar />
