@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import ThreeModels from "./ThreeModels";
 
 function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
   const [displayed, setDisplayed] = useState("");
@@ -195,6 +196,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 1 }}
             className="lg:col-span-5 space-y-4"
           >
+            <div className="bg-surface border border-border rounded-lg p-5 overflow-hidden">
+              <div className="mb-4">
+                <ThreeModels />
+              </div>
+            </div>
+
             <div className="bg-surface border border-border rounded-lg p-5">
               <div className="flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-green animate-pulse" />
@@ -229,7 +236,7 @@ export default function Hero() {
 
             <div className="bg-surface border border-border rounded-lg p-5">
               <p className="text-xs text-comment mb-3">
-                // tech_stack.config
+                {"// tech_stack.config"}
               </p>
               <div className="flex flex-wrap gap-2">
                 {[
