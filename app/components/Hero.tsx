@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import ThreeModels from "./ThreeModels";
+import ThreeHeroCanvas from "./ThreeHeroCanvas";
 
 function TypingText({ text, delay = 0 }: { text: string; delay?: number }) {
   const [displayed, setDisplayed] = useState("");
@@ -198,7 +198,7 @@ export default function Hero() {
           >
             <div className="bg-surface border border-border rounded-lg p-5 overflow-hidden">
               <div className="mb-4">
-                <ThreeModels />
+                <ThreeHeroCanvas />
               </div>
             </div>
 

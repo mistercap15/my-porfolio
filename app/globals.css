@@ -397,78 +397,20 @@ section .bg-background:hover {
   100% { transform: rotateX(72deg) translate3d(0, 70px, -280px); }
 }
 
-/* visible 3D models in hero */
-.model-stage {
-  position: relative;
-  height: 220px;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
-  background: radial-gradient(circle at center, rgba(14, 165, 233, 0.16), transparent 70%);
+/* Three.js hero model container */
+.three-hero-canvas {
+  width: 100%;
+  height: 260px;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(34, 211, 238, 0.24);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(34, 211, 238, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(167, 139, 250, 0.14), transparent 50%),
+    rgba(5, 10, 20, 0.55);
 }
 
-.model-cube {
-  position: relative;
-  width: 82px;
-  height: 82px;
-  transform-style: preserve-3d;
-}
-
-.model-cube .face {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(34, 211, 238, 0.8);
-  background: linear-gradient(145deg, rgba(34, 211, 238, 0.2), rgba(59, 130, 246, 0.08));
-  box-shadow: inset 0 0 20px rgba(34, 211, 238, 0.25), 0 0 15px rgba(34, 211, 238, 0.2);
-}
-
-.model-cube .front { transform: translateZ(41px); }
-.model-cube .back { transform: rotateY(180deg) translateZ(41px); }
-.model-cube .right { transform: rotateY(90deg) translateZ(41px); }
-.model-cube .left { transform: rotateY(-90deg) translateZ(41px); }
-.model-cube .top { transform: rotateX(90deg) translateZ(41px); }
-.model-cube .bottom { transform: rotateX(-90deg) translateZ(41px); }
-
-.model-sphere {
-  width: 92px;
-  height: 92px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.8), rgba(56, 189, 248, 0.35) 35%, rgba(37, 99, 235, 0.08) 75%);
-  box-shadow: 0 0 26px rgba(56, 189, 248, 0.35), inset -12px -15px 24px rgba(0, 0, 0, 0.35);
-}
-
-.model-pyramid {
-  position: relative;
-  width: 0;
-  height: 0;
-  transform-style: preserve-3d;
-  transform: translateY(6px);
-}
-
-.model-pyramid .tri {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 82px solid rgba(167, 139, 250, 0.38);
-  transform-origin: 50% 100%;
-  filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.45));
-}
-
-.model-pyramid .tri-front { transform: rotateY(0deg) translateZ(24px) rotateX(30deg); }
-.model-pyramid .tri-right { transform: rotateY(90deg) translateZ(24px) rotateX(30deg); }
-.model-pyramid .tri-back { transform: rotateY(180deg) translateZ(24px) rotateX(30deg); }
-.model-pyramid .tri-left { transform: rotateY(270deg) translateZ(24px) rotateX(30deg); }
-
-.model-pyramid .base {
-  position: absolute;
-  width: 82px;
-  height: 82px;
-  background: rgba(168, 85, 247, 0.18);
-  border: 1px solid rgba(196, 181, 253, 0.7);
-  transform: rotateX(90deg) translateZ(-42px) translateX(-41px) translateY(-41px);
+.three-hero-canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
