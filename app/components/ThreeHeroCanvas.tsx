@@ -12,6 +12,14 @@ declare global {
 export default function ThreeHeroCanvas() {
   const mountRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [scriptFailed, setScriptFailed] = useState(false);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      if (!ready) setScriptFailed(true);
+    }, 6000);
+    return () => window.clearTimeout(timer);
+  }, [ready]);
 
   useEffect(() => {
     if (!ready || !mountRef.current || !window.THREE) return;
@@ -203,8 +211,27 @@ export default function ThreeHeroCanvas() {
 
   return (
     <>
-      <Script src="https://unpkg.com/three@0.160.0/build/three.min.js" strategy="afterInteractive" onLoad={() => setReady(true)} />
-      <div className="three-hero-canvas" ref={mountRef} aria-label="3D developer model" />
+      <Script
+        src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"
+        strategy="afterInteractive"
+        onLoad={() => setReady(true)}
+        onError={() => setScriptFailed(true)}
+      />
+      <div className="three-hero-canvas" ref={mountRef} aria-label="3D developer model">
+        {(!ready || scriptFailed) && (
+          <div className="three-fallback">
+            <div className="three-fallback-cube">
+              <span className="front" />
+              <span className="back" />
+              <span className="right" />
+              <span className="left" />
+              <span className="top" />
+              <span className="bottom" />
+            </div>
+            <p>{scriptFailed ? "3D model fallback active" : "Loading 3D model..."}</p>
+          </div>
+        )}
+      </div>
     </>
   );
 }

@@ -197,7 +197,10 @@ export default function Hero() {
             className="lg:col-span-5 space-y-4"
           >
             <div className="bg-surface border border-border rounded-lg p-5 overflow-hidden">
-              <div className="mb-4">
+              <p className="text-xs text-cyan uppercase tracking-[0.2em] mb-3">
+                3d_model.engine
+              </p>
+              <div className="mb-1">
                 <ThreeHeroCanvas />
               </div>
             </div>
